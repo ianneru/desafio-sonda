@@ -1,10 +1,6 @@
-O desafio é uma avaliação técnica e sua missão é desenvolver a Cadastro de Clientes. Esse cadastro deve disponibilizar o CRUD de clientes que obedeça a arquitetura Asp.Net MVC. 
+#### O desafio é uma avaliação técnica e sua missão é desenvolver a Cadastro de Clientes. Esse cadastro deve disponibilizar o CRUD de clientes que obedeça a arquitetura Asp.Net MVC. 
 
-  
-
-Utilize as seguintes tecnologias/metodologias: 
-
-  
+#### Utilize as seguintes tecnologias/metodologias: 
 
 ·        C# 
 
@@ -20,9 +16,7 @@ Utilize as seguintes tecnologias/metodologias:
 
 ·        A implementação da responsabilidade de acesso a dados deve ser construída através de comandos nativo SQL (update, insert, select...) 
 
-  
-
-Considere que o domínio é rico e as especificações de negócio são: 
+#### Considere que o domínio é rico e as especificações de negócio são: 
 
 ·        Cliente deve conter ao menos um identificador, nome, cpf, idade e sexo; 
 
