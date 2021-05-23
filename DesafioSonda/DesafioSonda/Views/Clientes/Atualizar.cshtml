@@ -1,0 +1,60 @@
+﻿@model  DesafioSonda.ViewModels.UpdateClientesViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="text-left">
+        <a class="btn btn-link" href="@Url.Action("Index", "Clientes")">
+            Voltar
+        </a>
+    </div>
+    <h3>Atualizar Cliente</h3>
+
+    if(!ViewData.ModelState.IsValid) {
+            <div class="registration-val-summary">
+                <label class="registration-val-label">
+                    Verifique os erros a seguir:
+                </label>
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            </div>
+    }
+    <div>
+        @Html.HiddenFor(m => m.Identificador)
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="nome" class="control-label">Nome</label>
+                @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="cpf" class="control-label">Cpf</label>
+                @Html.TextBoxFor(m => m.Cpf, new { @class = "form-control"})
+      
+            </div>
+        </div>
+        <div class="row">
+            <div class=" form-group col-sm-12">
+                <label for="datanascimento" class="control-label">Data de Nascimento</label>
+                @Html.TextBoxFor(m => m.DataNascimento, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="datanascimento" class="control-label">Sexo</label>
+                @Html.DropDownListFor(m => m.Sexo,
+                     new SelectList(Enum.GetValues(typeof(DesafioSonda.Domain.Core.Sexo))),
+                     "Selecione o Sexo",
+                     new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class=" form-group col-sm-12">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+}
