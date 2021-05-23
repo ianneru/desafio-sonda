@@ -1,4 +1,4 @@
-﻿@model  ICollection<DesafioSonda.Services.DTOs.ClientesDTO>
+﻿@model  ICollection<DesafioSonda.Application.DTOs.ClientesDTO>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,7 +15,7 @@
             <tr>
                 <th scope="col">Nome</th>
                 <th scope="col">Cpf</th>
-                <th scope="col">Data Nasc.</th>
+                <th scope="col">Idade</th>
                 <th scope="col">Sexo</th>
                 <th scope="col">Ações</th>
             </tr>
@@ -31,13 +31,13 @@
                     @cliente.Cpf
                 </td>
                 <td>
-                    @cliente.DataNascimento.ToString("dd/MM/yyyy")
+                    @cliente.GetAge() anos
                 </td>
                 <td>
                     @cliente.Sexo
                 </td>
                 <td>
-                    <div class="btn-group">
+                    <div class="btn-group" style="margin-top:-8px">
                         <a class="btn btn-link"  href="@Url.Action("Atualizar", "Clientes", new { id = cliente.Identificador })" role="button">Atualizar</a>
                         <a class="btn btn-link" href="@Url.Action("Remover", "Clientes", new { id = cliente.Identificador })" role="button">Remover</a>
                     </div>

@@ -25,5 +25,7 @@ namespace DesafioSonda.ViewModels
             Cpf = cpf;
             Sexo = sexo;
         }
+
+       
     }
 }

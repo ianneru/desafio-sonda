@@ -25,5 +25,15 @@ namespace DesafioSonda.Application.DTOs
             Cpf = cpf;
             Sexo = sexo;
         }
+
+        public int GetAge()
+        {
+            var today = DateTime.Today;
+
+            var a = (today.Year * 100 + today.Month) * 100 + today.Day;
+            var b = (DataNascimento.Year * 100 + DataNascimento.Month) * 100 + DataNascimento.Day;
+
+            return (a - b) / 10000;
+        }
     }
 }

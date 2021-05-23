@@ -1,5 +1,4 @@
-﻿using DesafioSonda.Core.Exceptions;
-using DesafioSonda.Domain.Entities;
+﻿using DesafioSonda.Domain.Entities;
 using System;
 using Xunit;
 
